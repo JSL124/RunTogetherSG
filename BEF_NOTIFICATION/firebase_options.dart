@@ -4,16 +4,6 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
-/// Default [FirebaseOptions] for use with your Firebase apps.
-///
-/// Example:
-/// ```dart
-/// import 'firebase_options.dart';
-/// // ...
-/// await Firebase.initializeApp(
-///   options: DefaultFirebaseOptions.currentPlatform,
-/// );
-/// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -30,8 +20,7 @@ class DefaultFirebaseOptions {
         return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for linux - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
+          'DefaultFirebaseOptions have not been configured for linux.',
         );
       default:
         throw UnsupportedError(
@@ -41,49 +30,48 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDZ8YcfSvWXOEjL1MfnSsE_SlG46PsaTdM',
-    appId: '1:807032923836:web:1c339259ad47d1698f12b9',
-    messagingSenderId: '807032923836',
-    projectId: 'runtogetherapp-e8397',
-    authDomain: 'runtogetherapp-e8397.firebaseapp.com',
-    storageBucket: 'runtogetherapp-e8397.firebasestorage.app',
-    measurementId: 'G-2FJCRFHT9H',
+    apiKey: 'YOUR_WEB_API_KEY',
+    appId: 'YOUR_WEB_APP_ID',
+    messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+    projectId: 'YOUR_PROJECT_ID',
+    authDomain: 'YOUR_AUTH_DOMAIN',
+    storageBucket: 'YOUR_STORAGE_BUCKET',
+    measurementId: 'YOUR_MEASUREMENT_ID',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCWFEHuqKgqYO6QO7bgtkfYj7s7rn2tXO0',
-    appId: '1:807032923836:android:d0312e99ee00b2f78f12b9',
-    messagingSenderId: '807032923836',
-    projectId: 'runtogetherapp-e8397',
-    storageBucket: 'runtogetherapp-e8397.firebasestorage.app',
+    apiKey: 'YOUR_ANDROID_API_KEY',
+    appId: 'YOUR_ANDROID_APP_ID',
+    messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+    projectId: 'YOUR_PROJECT_ID',
+    storageBucket: 'YOUR_STORAGE_BUCKET',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDNLSzuq2BHmub3a5BCpK6lcHHZyuhYR5g',
-    appId: '1:807032923836:ios:1957227861dbd4d78f12b9',
-    messagingSenderId: '807032923836',
-    projectId: 'runtogetherapp-e8397',
-    storageBucket: 'runtogetherapp-e8397.firebasestorage.app',
-    iosBundleId: 'com.example.runtogetherApp',
+    apiKey: 'YOUR_IOS_API_KEY',
+    appId: 'YOUR_IOS_APP_ID',
+    messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+    projectId: 'YOUR_PROJECT_ID',
+    storageBucket: 'YOUR_STORAGE_BUCKET',
+    iosBundleId: 'YOUR_IOS_BUNDLE_ID',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDNLSzuq2BHmub3a5BCpK6lcHHZyuhYR5g',
-    appId: '1:807032923836:ios:1957227861dbd4d78f12b9',
-    messagingSenderId: '807032923836',
-    projectId: 'runtogetherapp-e8397',
-    storageBucket: 'runtogetherapp-e8397.firebasestorage.app',
-    iosBundleId: 'com.example.runtogetherApp',
+    apiKey: 'YOUR_MACOS_API_KEY',
+    appId: 'YOUR_MACOS_APP_ID',
+    messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+    projectId: 'YOUR_PROJECT_ID',
+    storageBucket: 'YOUR_STORAGE_BUCKET',
+    iosBundleId: 'YOUR_MACOS_BUNDLE_ID',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDZ8YcfSvWXOEjL1MfnSsE_SlG46PsaTdM',
-    appId: '1:807032923836:web:410d29cb7681a0a78f12b9',
-    messagingSenderId: '807032923836',
-    projectId: 'runtogetherapp-e8397',
-    authDomain: 'runtogetherapp-e8397.firebaseapp.com',
-    storageBucket: 'runtogetherapp-e8397.firebasestorage.app',
-    measurementId: 'G-XBYRT13H6N',
+    apiKey: 'YOUR_WINDOWS_API_KEY',
+    appId: 'YOUR_WINDOWS_APP_ID',
+    messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+    projectId: 'YOUR_PROJECT_ID',
+    authDomain: 'YOUR_AUTH_DOMAIN',
+    storageBucket: 'YOUR_STORAGE_BUCKET',
+    measurementId: 'YOUR_MEASUREMENT_ID',
   );
-
 }
